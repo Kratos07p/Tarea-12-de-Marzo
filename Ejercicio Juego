@@ -1,1 +1,22 @@
+class Jugador1:
+    nombre1 = "Manolo"
+    poder1 = "100%"
 
+class Jugador2:
+    nombre2 = "Paco"
+    poder2 = "100%"
+    
+from Jugadores import Jugador1
+from Jugadores import Jugador2
+
+class Juego(Jugador1,Jugador2):
+    pass
+    def __init__(self,poderActual,poderRestado):
+        self.poderRestado = poderRestado
+        self.poderActual = poderActual
+
+    def empezar(self):
+        return "El peleador {} empieza con el primer golpe con un poder de {} y le quita un {} de poder al peleador {} que baja su poder a {}".format(self.nombre1,self.poder1,self.poderRestado,self.nombre2,self.poderActual)
+
+juego1 = Juego("70%","30%")
+print(juego1.empezar())
