@@ -1,10 +1,9 @@
 class Estudiante:
     pass
-
     def __init__(self,nombre):
         self.nombre = nombre
 
-estudiante1 = Estudiante("Ixar Alberot")
+estudiante1 = Estudiante("Ixar Alberto")
 estudiante2 = Estudiante("Cristian Rivera")
 
 class Materias:
@@ -14,4 +13,26 @@ class Materias:
         self.materia = materia
 
 materia1 = Materias("POO")
-materia1 = Materias("Matematicas II")
+materia2 = Materias("Matematicas II")
+
+from EstudianteMaterias import Estudiante
+from EstudianteMaterias import estudiante1
+from EstudianteMaterias import estudiante2
+from EstudianteMaterias import Materias
+from EstudianteMaterias import materia1
+from EstudianteMaterias import materia2
+
+class Notas(Estudiante,Materias):
+    pass
+    def __init__(self,nombre,materia,notaLab,notaPar):
+        self.nombre = nombre
+        self.materia = materia
+        self.notaLab = notaLab
+        self.notaPar = notaPar
+
+    def verNotas(self):
+        return "El estudiante {} de la matera {} obtuvo en su examen de Laboratorio {} y en su examen Parcial {}".format(self.nombre,self.materia,self.notaLab,self.notaPar)
+    
+
+notaFinal = Notas(estudiante1.nombre,materia1.materia,10,8)
+print(notaFinal.verNotas())
