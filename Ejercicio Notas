@@ -1,0 +1,17 @@
+class Estudiante:
+    pass
+
+    def __init__(self,nombre):
+        self.nombre = nombre
+
+estudiante1 = Estudiante("Ixar Alberot")
+estudiante2 = Estudiante("Cristian Rivera")
+
+class Materias:
+    pass
+
+    def __init__(self,materia):
+        self.materia = materia
+
+materia1 = Materias("POO")
+materia1 = Materias("Matematicas II")
