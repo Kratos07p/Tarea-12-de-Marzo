@@ -1,1 +1,46 @@
+class Categoria:
+    categoria1 = "Accion"
+    categoria2 = "Comedia"
+    categoria3 = "Terror"
 
+class Peliculas(Categoria):
+    pass
+    def __init__(self,peli1,peli2,peli3):
+        self.peli1 = peli1
+        self.peli2 = peli2
+        self.peli3 = peli3
+    
+    def verAccion(self):
+        return "La categoria Accion cuenta con las siguientes peliculas: {},{},{}".format(self.peli1,self.peli2,self.peli3)
+    
+    def verComedia(self):
+        return "La categoria Comedia cuenta con las siguientes peliculas: {},{},{}".format(self.peli1,self.peli2,self.peli3)
+    
+    def verTerror(self):
+        return "La categoria Terror cuenta con las siguientes peliculas: {},{},{}".format(self.peli1,self.peli2,self.peli3)
+
+peliculas1 = Peliculas("Rapidos y Furiosos", "Mision Imposible","Duro de Matar")
+peliculas2 = Peliculas("¿Que paso ayer?","La Mascara","Ted")
+peliculas3 = Peliculas("La Monja","Anabelle","Chuky")
+print(peliculas2.verComedia())
+print(peliculas1.verAccion())
+print(peliculas3.verTerror())
+
+from Categoria import Peliculas
+from Categoria import peliculas1
+
+class Cliente(Peliculas):
+
+    def __init__(self, pelicula):
+        self.pelicula = pelicula
+
+    def validacion(self):
+        validacionPeli = peliculas1.peli1
+
+        if validacionPeli == self.pelicula:
+            print ("Usted ha escogido la Categoria Accion y la pelicula de Rapidos y Furiosos para disfrutar, Por favor pongase comodo que la pelicula esta por comenzar")
+        else:
+            print("Error")
+
+reproducir = Cliente("Rapidos y Furiosos")
+print (reproducir.validacion())
