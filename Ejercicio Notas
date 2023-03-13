@@ -15,12 +15,12 @@ class Materias:
 materia1 = Materias("POO")
 materia2 = Materias("Matematicas II")
 
-from EstudianteMaterias import Estudiante
-from EstudianteMaterias import estudiante1
-from EstudianteMaterias import estudiante2
-from EstudianteMaterias import Materias
-from EstudianteMaterias import materia1
-from EstudianteMaterias import materia2
+from Estudiante import Estudiante
+from Estudiante import estudiante1
+from Estudiante import estudiante2
+from Materias import Materias
+from Materias import materia1
+from Materias import materia2
 
 class Notas(Estudiante,Materias):
     pass
